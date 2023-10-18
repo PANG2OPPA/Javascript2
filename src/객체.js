@@ -42,3 +42,25 @@ console.log(carInfo);
 // 객체리터럴 동적으로 삭제하기
 delete carInfo.year;
 console.log(carInfo);
+
+// 객체 메소드 : 객체 내부에서 동작하는 함수, 즉, 프로퍼티에 저장된 값의 타입이 함수를 의미함.
+const person3 = {
+    name: 'John',
+    age: '30',
+    sayHello: function() {
+        console.log(`Hello, my name is ${this.name}.`);
+    }
+};
+person3.sayHello();
+// 생성자로 객체 생성하기, 함수 이름이지만 객체를 생성하기 위해서 사용하기 때문에 첫자가 대문자
+function Person(name, age, addr, job) {
+    this.name = name;
+    this.age = age;
+    this.addr = addr;
+    this.job = job;
+}
+
+const person11 = new Person("안유진", 21, "서울시 강남구 역삼동", "아이브");
+const person22 = new Person("장원영", 20, "서울시 강남구 청담동", "아이브");
+console.log(person11);
+console.log(person22);
