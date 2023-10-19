@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        button {
+            width: 150px;
+            height: 30px;
+        }
+        #btn1 {
+            background-color: green;
+            color: white;
+        }
+        #btn2 {
+            background-color: orange;
+            color: white;
+        }
+        #btn3 {
+            background-color: purple;
+            color: white;
+        }
+        #input_box {
+            width: 300px;
+            height: 200px;
+            justify-items: center;
+            display: flex;
+            border-radius: 10px 10px 10px 10px;
+            border: 1px solid gray;
+
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="onclickEvent1()" id="btn1">green</button>
+    <button onclick="onclickEvent2()" id="btn2">orange</button>
+    <button onclick="onclickEvent3()" id="btn3">purple</button>
+    <input id="input_box" type="text" onclick="onclickEvent">
+    
+    <script>
+        function onclickEvent1() {
+            let inputBox = document.querySelector("#input_box");
+            inputBox.style.background = "green";
+        }  
+        function onclickEvent2() {
+            let inputBox = document.querySelector("#input_box");
+            inputBox.style.background = "orange";
+        }  
+        function onclickEvent3() {
+            let inputBox = document.querySelector("#input_box");
+            inputBox.style.background = "purple";
+        }  
+    </script>
+</body>
+</html>

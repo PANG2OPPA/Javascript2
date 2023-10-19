@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        button {
+            width: 150px;
+            height: 30px;
+        }
+        #btn1 {
+            background-color: green;
+            color: white;
+        }
+        #btn2 {
+            background-color: orange;
+            color: white;
+        }
+        #btn3 {
+            background-color: purple;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="clickEvent1()" id="btn1">green</button>
+    <button onclick="clickEvent2()" id="btn2">orange</button>
+    <button onclick="clickEvent3()" id="btn3">purple</button>
+    
+    <script>
+        function clickEvent1() {
+            alert("green색 버튼을 클릭하셨습니다.");
+        } 
+        function clickEvent2() {
+            alert("orange색 버튼을 클릭하셨습니다.");
+        }     
+        function clickEvent3() {
+            alert("purple색 버튼을 클릭하셨습니다.");
+        }     
+    </script>
+</body>
+</html>
