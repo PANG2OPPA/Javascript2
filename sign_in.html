@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/sign_in.css">
+    <title>회원가입</title>
+</head>
+<body>
+    <script src="./src/sign_in.js"></script>
+    <div class="container">
+        <div class="input">
+            <div id="id" class="box2">
+                <input type="text" id="input_id" class="btn" placeholder="아이디 입력">
+                <button id="check_id" onclick="ex1()">확인</button>
+            </div>
+            <div id="error1"></div>
+            
+            <div id="pwd" class="box2">
+                <input type="password" id="input_pwd" class="btn" placeholder="패스워드 입력">
+                <button id="check_pwd" onclick="ex2()">확인</button>
+            </div>
+            <div id="error2"></div>
+
+            <div id="email" class="box2">
+                <input type="email" id="input_email" class="btn" placeholder="이메일 입력">
+                <button id="check_email" onclick="ex3()">확인</button>
+            </div>
+            <div id="error3"></div>
+
+            <div id="tel" class="box2">
+                <input type="text" id="input_tel" class="btn" placeholder="전화번호 입력">
+                <button id="check_tel" onclick="ex4()">확인</button>
+            </div>
+            <div id="error4"></div>
+
+            <div id="ok" class="box2">
+                <button id="ok1">가입 요청</button>
+            </div>
+        </div>
+
+        <script>
+            const regexId = /^\w{8,20}$/;
+            const regexPwd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
+            const regexEmail = /^([a-z]+\d*)+(\.?\w+)+@\w+(\.\w{2,3})+$/;
+            const regexTel = /^\d{2,3}-\d{3,4}-\d{4}$/;
+
+            function ex1(){
+                let id=document.getElementById("input_id").value;
+                let rst1 = regexId.test(id);
+
+                if(rst1 === true) {
+                    let errorCode = document.querySelector("#error1");
+                    errorCode.style.color = "green";
+                    document.getElementById('error1').innerHTML="정상 입력"
+                } else {
+                    let errorCode = document.querySelector("#error1");
+                    errorCode.style.color = "red";
+                    document.getElementById('error1').innerHTML="비정상 입력"
+                }            
+}
+
+            function ex2(){
+                let pwd=document.getElementByPwd("input_pwd").value;
+                let rst2 = regexPwd.test(pwd);
+
+                if(rst2 === true) {
+                    let errorCode = document.querySelector("#error2");
+                    errorCode.style.color = "green";
+                    document.getElementByPwd('error2').innerHTML="정상 입력"
+                } else {
+                    let errorCode = document.querySelector("#error2");
+                    errorCode.style.color = "red";
+                    document.getElementByPwd('error2').innerHTML="비정상 입력"
+                }            
+}
+
+            function ex3(){
+                let email=document.getElementByEmail("input_email").value;
+                let rst3 = regexEmail.test(email);
+
+                if(rst3 === true) {
+                    let errorCode = document.querySelector("#error3");
+                    errorCode.style.color = "green";
+                    document.getElementByEmail('error3').innerHTML="정상 입력"
+                } else {
+                    let errorCode = document.querySelector("#error3");
+                    errorCode.style.color = "red";
+                    document.getElementByEmail('error3').innerHTML="비정상 입력"
+                }            
+}
+
+            function ex4(){
+                let tel=document.getElementByTel("input_tel").value;
+                let rst4 = regexTel.test(tel);
+
+                if(rst4 === true) {
+                    let errorCode = document.querySelector("#error4");
+                    errorCode.style.color = "green";
+                    document.getElementByTel('error4').innerHTML="정상 입력"
+                } else {
+                    let errorCode = document.querySelector("#error4");
+                    errorCode.style.color = "red";
+                    document.getElementByTel('error4').innerHTML="비정상 입력"
+                }            
+}
+        </script>
+
+</body>
+</html>
