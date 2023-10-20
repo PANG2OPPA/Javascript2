@@ -12,7 +12,7 @@
             margin: auto;
         }
         button {
-            background-color: aqua;
+            background-color: gray;
             padding: 5px;
             border: 1px solid black;
             font-size: 0.8em;
@@ -32,19 +32,16 @@
 </head>
 <body>
     <div class="container">
+        <div id="item">
         <img src="./img/잇지.jpeg" width="400px" alt="이미지">
-        <button class="over" id="open" onclick="showDetail()">상세설명보기</button>
+        <button class="over" id="open" onclick="showDetail()">상세 설명 보기</button>
         <div id="desc" class="detail">
-            <h4>잇지</h4>
-            <p>시부렁시부렁 잇지잇지지지지지지지베베베베
-                베베베베베베베베베벱
-                에베베베베우우베[ㅇㅂ애ㅡㅈ으ㅏㅇㄿ
-                ㄴ롤랄ㄹ루라랄리]
-            </p>
-            <button id="close" onclick="hideDetail()">상세설명닫기</button>
+            <h4>있지</h4>
+            <p>야야야야야야양ㄻ자ㅣㅓ퓸ㅈ대푸배ㅔㅈ댷풎ㄷㅎ피ㅏㄷ픠ㅏ루피ㅏ퓌바ㅜㅠㅎㅂ댜ㅠㅜ</p>
+            <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
         </div>
-    </div>
-    
+        </div>
+        
     <script>
         function showDetail() {
             document.querySelector('#desc').style.display = "block";

@@ -7,6 +7,8 @@
         button {
             width: 150px;
             height: 30px;
+            border: none;
+            margin: 5px;
         }
         #btn1 {
             background-color: green;
@@ -20,14 +22,19 @@
             background-color: purple;
             color: white;
         }
+        .box {
+            display: flex;
+            justify-content: center;
+        }
 
     </style>
 </head>
 <body>
+    <div class="box">
     <button onclick="clickEvent1()" id="btn1">green</button>
     <button onclick="clickEvent2()" id="btn2">orange</button>
     <button onclick="clickEvent3()" id="btn3">purple</button>
-    
+    </div>
     <script>
         function clickEvent1() {
             alert("green색 버튼을 클릭하셨습니다.");

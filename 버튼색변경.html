@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
+        *{
+            width: 1500px;
+        }
         button {
             width: 150px;
             height: 30px;
+            margin: 5px;
         }
         #btn1 {
             background-color: green;
@@ -23,20 +27,32 @@
         #input_box {
             width: 300px;
             height: 200px;
-            justify-items: center;
-            display: flex;
             border-radius: 10px 10px 10px 10px;
             border: 1px solid gray;
-
+        }
+        #btn {
+            display: flex;
+            justify-content: center;
+        }
+        #box2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
         }
 
     </style>
 </head>
 <body>
-    <button onclick="onclickEvent1()" id="btn1">green</button>
-    <button onclick="onclickEvent2()" id="btn2">orange</button>
-    <button onclick="onclickEvent3()" id="btn3">purple</button>
+    <div id="box">
+        <div id="btn">
+            <button onclick="onclickEvent1()" id="btn1">green</button>
+            <button onclick="onclickEvent2()" id="btn2">orange</button>
+            <button onclick="onclickEvent3()" id="btn3">purple</button>
+        </div>
+    <div id="box2">
     <input id="input_box" type="text" onclick="onclickEvent">
+    </div>
+    </div>
     
     <script>
         function onclickEvent1() {
